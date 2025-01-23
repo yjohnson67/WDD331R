@@ -40,15 +40,12 @@ body {
   }
 }
 body h1 {
-  color: #af7b9c;
+  color: #9f93a7;
 }
 
 #contactform {
   background-color: #9f93a7;
   padding: 1rem;
-  /*#submitBtn {
-     margin: 1rem;
-  }*/
 }
 #contactform legend, #contactform label {
   color: #2b2b2c;
