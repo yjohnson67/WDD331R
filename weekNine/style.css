@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&display=swap");
+:root :root {
+  --box-max-width: 500px;
+  --box-min-width: 300px;
+  --box-preferred-width: 80%;
+  --img-max-width: 300px;
+  --img-min-width: 80px;
+  --img-preferred-width: 50%;
+  --primaryColor:#8829FD;
+  --secondaryColor:#00C5E6;
+  --accentColor:#EEC53E;
+}
+:root h1 {
+  color: var(--primary-color);
+  filter: brightness(var(--brightness, 100%));
+  --fluid-type-min: 3rem;
+  --fluid-type-target: 4vw;
+  --fluid-type-max: 4rem;
+}
+:root .quote-box {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 20px;
+  border: 8px solid var(--accent-color);
+  width: clamp(var(--box-min-width), var(--box-preferred-width), var(--box-max-width));
+  margin: 2rem auto;
+  padding: 1.5em;
+}
+:root .quote-box__quote {
+  position: relative;
+  width: 90%;
+  margin-left: 2rem;
+  --fluid-type-min: 1.25rem;
+  --fluid-type-target: 2.5vw;
+  --fluid-type-max: 2rem;
+}
+:root .quote-box__quote p {
+  color: var(--primary-color);
+  filter: brightness(var(--brightness, 100%));
+}
+:root .quote-box__quote::before {
+  --quoteSize: 80px;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20.458 20.544'%3E%3Cpath fill='%23333' d='M11.37 20.544v-9.792c-.043-1.408.16-2.73.607-3.968a10.31 10.31 0 0 1 1.889-3.265 10.414 10.414 0 0 1 2.912-2.336 10.382 10.382 0 0 1 3.68-1.184v4.224c-1.622.556-2.731 1.376-3.328 2.464-.598 1.089-.896 2.423-.896 4h4.224v9.856H11.37zm-11.364 0v-9.792c-.043-1.408.16-2.73.608-3.968A10.311 10.311 0 0 1 2.502 3.52a10.414 10.414 0 0 1 2.912-2.336A10.369 10.369 0 0 1 9.094 0v4.224C7.472 4.779 6.363 5.6 5.766 6.688c-.598 1.089-.896 2.423-.896 4h4.224v9.856H.006z'/%3E%3C/svg%3E");
+  content: "";
+  height: var(--quoteSize);
+  width: var(--quoteSize);
+  position: absolute;
+  left: -75px;
+  top: -20px;
+  transform: rotate(30deg);
+}
+:root .quote-box__quote-author {
+  text-align: right;
+}
+:root .quote-box__author-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+:root .quote-box__author-image img {
+  position: relative;
+  margin: 1rem;
+  width: clamp(var(--img-min-width), var(--img-preferred-width), var(--img-max-width));
+  border: 4px solid var(--accentColor);
+  box-shadow: 10px 10px 0 var(--accentColor);
+}
+@media (min-width: 1400px) {
+  :root .box-section {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  :root p {
+    font-family: "Atma", sans-serif;
+    font-size: clamp(var(--fluid-type-min, 1rem), 1rem + var(--fluid-type-target, 3vw), var(--fluid-type-max, 1.3rem));
+  }
+  :root h1 {
+    font-family: "Atma", sans-serif;
+    text-align: center;
+    font-size: clamp(var(--fluid-type-min, 4rem), 1rem + var(--fluid-type-target, 6vw), var(--fluid-type-max, 6rem));
+  }
+}
+@media (min-width: 1400px) and (max-width: 650px) {
+  :root p {
+    font-size: calc(0.7 * clamp(var(--fluid-type-min, 1rem), 1rem + var(--fluid-type-target, 3vw), var(--fluid-type-max, 1.3rem)));
+  }
+  :root .quote-box__quote::before {
+    --quoteSize: 60px;
+    left: -60px;
+  }
+}
+
+body {
+  margin: 2rem;
+  min-width: 380px;
+}
+
+p {
+  font-family: "Atma", sans-serif;
+  font-size: clamp(var(--fluid-type-min, 1rem), 1rem + var(--fluid-type-target, 3vw), var(--fluid-type-max, 1.3rem));
+}
+
+h1 {
+  font-family: "Atma", sans-serif;
+  text-align: center;
+  font-size: clamp(var(--fluid-type-min, 4rem), 1rem + var(--fluid-type-target, 6vw), var(--fluid-type-max, 6rem));
+}
+
+@media (max-width: 650px) {
+  p {
+    font-size: calc(0.7 * clamp(var(--fluid-type-min, 1rem), 1rem + var(--fluid-type-target, 3vw), var(--fluid-type-max, 1.3rem)));
+  }
+  .quote-box__quote::before {
+    --quoteSize: 60px;
+    left: -60px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

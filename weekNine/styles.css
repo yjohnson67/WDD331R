@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&display=swap');
+:root {
+    --max-width: 900px;
+    --min-width: 300px;
+    --preferred-width: 80%;
+    --quoteColor: #b3d4e6;
+    --primaryColor:#8829FD
+    --secondaryColor:#00C5E6
+    --accentColor:#EEC53E
+  }
+
+  h1 {
+    color: var(--primary-color);
+    filter: brightness(var(--brightness, 100%));
+    --fluid-type-min: 3rem;
+    --fluid-type-target: 4vw;
+    --fluid-type-max: 4rem;
+  }
+  
+  .quote-box {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 20px;
+    border: 8px solid var(--accent-color);
+    width: clamp(var(--box-min-width), var(--box-preferred-width), var(--box-max-width));
+    margin: 2rem auto;
+    padding: 1.5em;
+  }
+  .quote-box__quote {
+    position: relative;
+    width: 90%;
+    margin-left: 2rem;
+    --fluid-type-min: 1.25rem;
+    --fluid-type-target: 2.5vw;
+    --fluid-type-max: 2rem;
+  }
+  .quote-box__quote p {
+    color: var(--primary-color);
+    filter: brightness(var(--brightness, 100%));
+  }
+  .quote-box__quote::before {
+    --quoteSize: 80px;
+    background-image: url(./images/quote.svg);
+    content: "";
+    height: var(--quoteSize);
+    width: var(--quoteSize);
+    position: absolute;
+    left: -75px;
+    top: -20px;
+    transform: rotate(30deg);
+  }
+  .quote-box__quote-author {
+    text-align: right;
+  }
+  .quote-box__author-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .quote-box__author-image img {
+    position: relative;
+    margin: 1rem;
+    width: clamp(var(--img-min-width), var(--img-preferred-width), var(--img-max-width));
+    border: 4px solid var(--accent-color);
+    box-shadow: 10px 10px 0 var(--accent-color);
+  }
+  
+  @media (min-width: 1400px) {
+    .box-section {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+  body {
+    margin: 2rem;
+    min-width: 380px;
+  }
+  
+  p {
+    font-family: "Atma", sans-serif;
+    font-size: clamp(var(--fluid-type-min, 1rem), 1rem + var(--fluid-type-target, 3vw), var(--fluid-type-max, 1.3rem));
+  }
+  
+  h1 {
+    font-family: "Atma", sans-serif;
+    text-align: center;
+    font-size: clamp(var(--fluid-type-min, 4rem), 1rem + var(--fluid-type-target, 6vw), var(--fluid-type-max, 6rem));
+  }
+  
+  @media (max-width: 650px) {
+    p {
+      font-size: calc(0.7 * clamp(var(--fluid-type-min, 1rem), 1rem + var(--fluid-type-target, 3vw), var(--fluid-type-max, 1.3rem)));
+    }
+    .quote-box__quote::before {
+      --quoteSize: 60px;
+      left: -60px;
+    }
+  }
+  
+  /*# sourceMappingURL=style.css.map */
