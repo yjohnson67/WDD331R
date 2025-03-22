@@ -1,0 +1,18 @@
+{
+    "name": "tailwind-demo",
+    "version": "1.0.0",
+    "description": "Advanced CSS Assignment using TailwindCSS with Vite",
+    "main": "index.js",
+    "scripts": {
+      "start": "vite",
+      "build": "vite build",
+      "preview": "vite preview"
+    },
+    "type": "module",
+    "dependencies": {},
+    "devDependencies": {
+      "vite": "latest",
+      "tailwindcss": "latest",
+      "@tailwindcss/vite": "latest"
+    }
+  }
